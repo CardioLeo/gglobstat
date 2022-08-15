@@ -7,6 +7,16 @@
 
 #!/bin/bash
 
+# PseudoCode:
+# 1. make file to save paths to.
+# 2. search home file for git folders.
+# 3. save paths to file.
+# 4. retrieve path from file and place as parameters for argument to cd into.
+# 5. cd into path.
+# 6. run "git status"
+# 7. repeat steps 4-6 until there are no more paths left.
+# 8 exit script. 
+
 cd ~/Documents/Coding/Linux/bashing/my_bash_scripts/gglobstat/
 
 touch gglobstatpath.txt
@@ -21,10 +31,12 @@ grep -rl --include="*.git/" ${PWD}
 # grep ".git" > gglobstatpath.txt
 #
 # echocslsk@hearEnigma:~$ grep -rl --include="*.js" "searchString" ${PWD}
+# output:
 # /home/echocslsk/.vscode/extensions/vscodevim.vim-1.23.2/out/extensionWeb.js
 # /home/echocslsk/.vscode/extensions/vscodevim.vim-1.23.2/out/extension.js
 # ^H^C
-#echocslsk@hearEnigma:~$ grep -rl --include=".git/" "searchString" ${PWD}
+# 
+# echocslsk@hearEnigma:~$ grep -rl --include=".git/" "searchString" ${PWD}
 
 
 #^^^^^^^ So what does "searchString" do?
