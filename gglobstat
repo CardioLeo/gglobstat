@@ -1,0 +1,30 @@
+# Author: William Z Chadwick
+# Date Created: 08/15/2022
+# Date Modified: 08/15/2022
+# Description: An attempt to make a bash script that checks the status of all my git repos on my machine.
+# Usage: gglobstat
+
+
+#!/bin/bash
+
+cd ~/Documents/Coding/Linux/bashing/my_bash_scripts/gglobstat/
+
+touch gglobstatpath.txt
+
+cd /
+grep -rl --include="*.git/" ${PWD}
+
+# grep -rl --include="*.git/" ${PWD}
+
+# grep -r *.git/
+
+# grep ".git" > gglobstatpath.txt
+#
+# echocslsk@hearEnigma:~$ grep -rl --include="*.js" "searchString" ${PWD}
+# /home/echocslsk/.vscode/extensions/vscodevim.vim-1.23.2/out/extensionWeb.js
+# /home/echocslsk/.vscode/extensions/vscodevim.vim-1.23.2/out/extension.js
+# ^H^C
+#echocslsk@hearEnigma:~$ grep -rl --include=".git/" "searchString" ${PWD}
+
+
+#^^^^^^^ So what does "searchString" do?
